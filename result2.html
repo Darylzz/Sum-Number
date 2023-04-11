@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test 2</title>
+  </head>
+  <body>
+    <label>Input X = </label>
+    <input class="inputX" type="text" />
+    <br />
+    <br />
+    <label>Input Y = </label>
+    <input class="inputY" type="text" />
+    <br />
+    <br />
+    <label>X + Y = </label>
+    <label class="sum"></label>
+    <button onclick="sumCal()">Calculate</button>
+    <script>
+      function sumCal() {
+        var x = document.querySelector(".inputX").value;
+        var y = document.querySelector(".inputY").value;
+        var sum = document.querySelector(".sum");
+        if (+x && +y) {
+          document.querySelector(".sum").innerHTML = x ** 2 + y ** 3;
+        } else {
+          return alert("Cannot calculate");
+        }
+      }
+    </script>
+  </body>
+</html>
